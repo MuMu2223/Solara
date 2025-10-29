@@ -1481,8 +1481,8 @@ input[type="range"]:active::-moz-range-thumb {
     gap: 8px; /* 按钮间距 */
 }
 
-/* 复用日夜模式按钮样式的 Telegram 按钮 */
-.theme-toggle-button.telegram-btn {
+/* 按钮样式（Telegram 与日夜模式一致） */
+.theme-toggle-button, .theme-toggle-button.telegram-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1493,11 +1493,11 @@ input[type="range"]:active::-moz-range-thumb {
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
-    color: inherit; /* 可随深浅模式切换颜色 */
+    color: inherit; /* 可随深浅模式变色 */
 }
 
-.theme-toggle-button.telegram-btn:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* 与深浅模式悬停效果一致 */
+.theme-toggle-button:hover, .theme-toggle-button.telegram-btn:hover {
+    background-color: rgba(0,0,0,0.05); /* 悬停效果一致 */
     transform: scale(1.1);
 }
 
