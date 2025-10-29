@@ -440,7 +440,7 @@ body.background-transitioning .background-stage__layer--transition {
 .search-result-item:nth-child(5) { animation-delay: 0.3s; }
 
 @keyframes slideInUp {
-    to {
+    到 {
         transform: translateY(0);
         opacity: 1;
     }
@@ -518,7 +518,7 @@ body.background-transitioning .background-stage__layer--transition {
 /* 主要内容区域 - 播放模式显示，搜索模式隐藏 */
 .main-content {
     display: contents;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 全部 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container.search-mode .main-content {
@@ -695,9 +695,9 @@ html.mobile-view .playlist-label {
     border: 1px solid var(--border-color);
     background: var(--component-bg);
     color: var(--text-secondary-color);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0， 0.1);
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: 全部 0.25s ease;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
@@ -713,7 +713,7 @@ html.mobile-view .playlist-label {
 
 .clear-playlist-btn:active {
     transform: translateY(0);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0， 0.12);
 }
 
 .playlist-scroll {
@@ -1481,25 +1481,24 @@ input[type="range"]:active::-moz-range-thumb {
     gap: 8px; /* 按钮间距 */
 }
 
-/* Telegram按钮样式（纯图标圆形） */
-.telegram-btn {
+/* 复用日夜模式按钮样式的 Telegram 按钮 */
+.theme-toggle-button.telegram-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 32px;
     height: 32px;
-    background-color: #0088cc;
+    background-color: transparent; /* 与深浅模式一致 */
     border: none;
     border-radius: 50%;
-    color: #fff;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.2s, transform 0.2s;
+    color: inherit; /* 可随深浅模式切换颜色 */
 }
 
-.telegram-btn:hover {
-    background-color: #007ab8;
-    transform: scale(1.1); /* 悬停略微放大 */
+.theme-toggle-button.telegram-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* 与深浅模式悬停效果一致 */
+    transform: scale(1.1);
 }
 
 /* 移动端自适应 */
@@ -1507,7 +1506,7 @@ input[type="range"]:active::-moz-range-thumb {
     .theme-switch-wrapper {
         gap: 4px; /* 缩小按钮间距 */
     }
-    .telegram-btn, .theme-toggle-button {
+    .theme-toggle-button, .theme-toggle-button.telegram-btn {
         width: 28px;
         height: 28px;
         font-size: 14px;
